@@ -24,15 +24,16 @@ console.log(document.images);*/
 
 //getElementByClassName//
 var item = document.getElementsByClassName('list-group-item');
-console.log(item);
-// item[1].textContent = 'Hello 2';
-item[1].style.fontWeight = 'bold';
+
+
 item[2].style.backgroundColor = 'green';
-// item.style.backgroundColor = '#f4f4f4';
+
 for(var i=0; i<item.length; i++)
 {
     item[i].style.fontWeight = 'bold';  
 }
+var li = document.getElementsByTagName('li');
+li[1].style.backgroundColor = 'black';
 
 
 
