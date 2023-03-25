@@ -23,18 +23,37 @@ console.log(document.images);*/
 // header.style.borderBottom = 'solid 3px #000';
 
 //getElementByClassName//
-var item = document.getElementsByClassName('list-group-item');
+// var item = document.getElementsByClassName('list-group-item');
+// item[2].style.backgroundColor = 'green';
 
+// for(var i=0; i<item.length; i++)
+// {
+//     item[i].style.fontWeight = 'bold';  
+// }
+// var li = document.getElementsByTagName('li');
+// li[1].style.backgroundColor = 'black';
 
-item[2].style.backgroundColor = 'green';
+//querySelector//
 
-for(var i=0; i<item.length; i++)
-{
-    item[i].style.fontWeight = 'bold';  
-}
-var li = document.getElementsByTagName('li');
-li[1].style.backgroundColor = 'black';
+// var item = document.querySelector('.list-group-item');
+// item.style.color = 'green';
 
+// var nthitem = document.querySelector('.list-group-item:nth-child(2)');
+// nthitem.style.color = 'green';
+
+// var rditem = document.querySelector('.list-group-item:nth-child(3)');
+// rditem.style.visibility = 'hidden';
+
+//querySelectorAll//
+
+// var item = document.querySelectorAll('.list-group-item');
+// item[1].style.color = 'green';
+
+ var odd = document.querySelectorAll('li:nth-child(odd)');
+ for(var i=0; i<odd.length; i++)
+ {
+    odd[i].style.backgroundColor = 'green';
+ }
 
 
 
