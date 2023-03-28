@@ -54,57 +54,57 @@ console.log(document.images);*/
 //  {
 //     odd[i].style.backgroundColor = 'green';
 //  }
-var itemList = document.querySelector('#items');
-//parentNode
-console.log(itemList.parentNode);
-itemList.parentNode.style.backgroundColor = '#f4f4f4';
-console.log(itemList.parentNode.parentNode.parentNode);
-//parentElement
-console.log(itemList.parentElement);
-itemList.parentElement.style.backgroundColor = '#f4f4f4';
-console.log(itemList.parentElement.parentElement.parentElement);
-// childNodes    children
-console.log(itemList.childNodes);
-console.log(itemList.childrn);
-console.log(itemList.children[1]);
-itemList.children[1].style.backgroundColor = 'green';
-//firstChild
-console.log(itemList.firstChild);
-//firstElementChild
-console.log(itemList.firstElementChild);
-itemList.firstElementChild.textContent = 'Hello 1';
-//lastChile
-console.log(itemList.lastChild);
-//lastElementchild
-console.log(itemList.lastElementChild);
-itemList.lastElementChild.textContent = 'Hello 4';
-//nextSibling
-console.log(itemList.nextSibling);
-//nextElementSibling
-console.log(itemList.nextElementSibling);
-//previousSibling
-console.log(itemList.previousSibling);
-//previousElementSibling
-console.log(itemList.previousElementSibling);
-//creatElement
-//creat a div
-var newDiv = document.createElement('div');
-//Add Class
-newDiv.className = 'hello';
-//Add Class
-newDiv.id = 'hello1';
-//Add attr
-newDiv.setAttribute('title','Hellodiv'); 
-//creat text node
-var newDivText = document.createTextNode('Hello World');
-//Add Text to Div
-newDiv.appendChild(newDivText);
+// var itemList = document.querySelector('#items');
+// //parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+// //parentElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
+// // childNodes    children
+// console.log(itemList.childNodes);
+// console.log(itemList.childrn);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'green';
+// //firstChild
+// console.log(itemList.firstChild);
+// //firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello 1';
+// //lastChile
+// console.log(itemList.lastChild);
+// //lastElementchild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'Hello 4';
+// //nextSibling
+// console.log(itemList.nextSibling);
+// //nextElementSibling
+// console.log(itemList.nextElementSibling);
+// //previousSibling
+// console.log(itemList.previousSibling);
+// //previousElementSibling
+// console.log(itemList.previousElementSibling);
+// //creatElement
+// //creat a div
+// var newDiv = document.createElement('div');
+// //Add Class
+// newDiv.className = 'hello';
+// //Add Class
+// newDiv.id = 'hello1';
+// //Add attr
+// newDiv.setAttribute('title','Hellodiv'); 
+// //creat text node
+// var newDivText = document.createTextNode('Hello World');
+// //Add Text to Div
+// newDiv.appendChild(newDivText);
 
-var container = document.querySelector('Header .container');
-var h1 = document.querySelector('header h1');
-console.log(newDiv);
-newDiv.style.fontSize = '30px';
-container.insertBefore(newDiv, h1);
+// var container = document.querySelector('Header .container');
+// var h1 = document.querySelector('header h1');
+// console.log(newDiv);
+// newDiv.style.fontSize = '30px';
+// container.insertBefore(newDiv, h1);
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
 var filter = document.getElementById('filter');
@@ -129,7 +129,10 @@ function addItem(e){
   li.className = 'list-group-item';
   // Add text node with input value
   li.appendChild(document.createTextNode(newItem));
-
+var editBtn = document.createElement('button');
+  editBtn.className = 'edit float-right';
+  editBtn.appendChild(document.createTextNode('edit'));
+  li.appendChild(editBtn);
   // Create del button element
   var deleteBtn = document.createElement('button');
 
@@ -172,10 +175,3 @@ function filterItems(e){
     }
   });
 }
-
-
-
-
-
-
-
