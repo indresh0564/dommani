@@ -123,6 +123,11 @@ function addItem(e){
   // Get input value
   var newItem = document.getElementById('item').value;
   var box = document.getElementById('itemNext').value;
+//storage 
+  //store in localStorage
+  localStorage.setItem('name',newItem);
+  console.log(localStorage.getItem('name'));
+ 
   // Create new li element
   var li = document.createElement('li');
   // Add class
