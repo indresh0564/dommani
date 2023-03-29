@@ -127,7 +127,7 @@ function addItem(e){
   //store in localStorage
   localStorage.setItem('name',newItem);
   console.log(localStorage.getItem('name'));
- 
+  ///////////////////////////////////////////
   // Create new li element
   var li = document.createElement('li');
   // Add class
