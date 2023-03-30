@@ -125,9 +125,16 @@ function addItem(e){
   var box = document.getElementById('itemNext').value;
 //storage 
   //store in localStorage
-  localStorage.setItem('name',newItem);
-  console.log(localStorage.getItem('name'));
+  // localStorage.setItem('name',newItem);
+  // console.log(localStorage.getItem('name'));
   ///////////////////////////////////////////
+  // store in localStorage using objct method
+  const myObj = {
+    newItem : newItem,
+    box : box, 
+  }
+  localStorage.setItem('userdetail', JSON.stringify(myObj));
+  
   // Create new li element
   var li = document.createElement('li');
   // Add class
