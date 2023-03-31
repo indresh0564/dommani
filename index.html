@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -45,4 +45,60 @@
 
 </html>
 index.html
-Displaying index.html.
+Displaying index.html. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+  <form onsubmit="saveToLocalStorage(event)">
+  <label for="name" id="name">name</label>
+  <input type="text" name="name"  placeholder="enter name">
+  <label for="email" id="email">email</label>
+  <input type="email" name="email" placeholder="enter email">
+  <label for="phone" id="phone">phone</label>
+  <input type="tel" name="phone" placeholder="enter phone">
+  <button type="submit">Submit</button>
+</form>
+<ul id="listOfitem"></ul>
+  <script>
+    // const name = document.getElementsByClassName('name');
+    // console.log(name);
+    // localStorage.setItem('myname',name);
+    // console.log(localStorage.getItem('myname'));
+    function saveToLocalStorage(event){
+      // console.log(1);
+      // console.log(1);
+      event.preventDefault();
+      const name = event.target.name.value;
+      const email = event.target.email.value;
+      const phone = event.target.phone.value;
+    //  localStorage.setItem('name',name);
+    //  localStorage.setItem('email',email);
+    //  localStorage.setItem('phone',phone);
+     const obj = {
+      name,
+      email,
+      phone
+      
+     }
+     //
+     localStorage.setItem(obj.email,JSON.stringify(obj));
+    showOnScreen(obj)
+    }
+    // console.log(1);
+    function showOnScreen(obj){
+      const parentElem = document.getElementById('listOfitem')
+       const childElem = document.createElement('li')
+       childElem.textContent = obj.name + '-' + obj.email + '-' + obj.phone 
+       parentElem.appendChild(childElem); 
+    
+    }
+  
+  </script>
+</body>
+</html>
